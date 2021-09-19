@@ -1,15 +1,24 @@
-
-
-
-.numbers {
+.input-fields {
   display: flex;
-  /* margin: 3em; */
+}
+/*
+button {
+  padding: 1.8em;
+  margin: 20em;
+  font-size: .8em;
+  font-size: 1.2em;
+  border-radius: 90%;
+  margin: .5em 0em;
+  cursor: pointer;
+}
+*/
+
+.operators {
+  /* flex-wrap: wrap; */
+  display: flex;
+  flex-direction: column;
 }
 
-.numbers > button {
-  padding: 3em;
-  /* margin: 20em; */
-  font-size: 2em;
-
-
+.operators > button {
+  margin-left: .8em;
 }
