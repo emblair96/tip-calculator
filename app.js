@@ -1,26 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // code...
-
-
 let mealAmt = document.querySelector("#mealAmt");
 let tipPercentage = document.querySelector("#tipPercentage");
 let calculateBtn = document.querySelector("#calculateBtn");
 var { calculateTip } = require('./util');
 
-console.log(calculateBtn)
 
-function calculateNewTotal() {
-  console.log('hello')
-}
-
-calculateBtn.addEventListener("click", () => calculateTip(mealAmt, tipPercentage));
-calculateBtn.addEventListener("click", calculateNewTotal());
-
-// calculateNewTotal()
-
-// module.exports = {
-//   calculateTip: (meal,tip) => {
-//     return meal * (tip/100);
-//   }
-// };
-})
+calculateBtn.addEventListener("click", () => {
+  let tip = calculateTip(mealAmt.value, tipPercentage.value);
+  let total = Number(mealAmt.value) + tip;
+  let tipP = document.createElement("p")
+  tipP.textContent = tip;
+  let totalP = document.createElement("p");
+  totalP.textContent = total;
+  document.querySelector(".output-fields").append(tipP, totalP);
+});
