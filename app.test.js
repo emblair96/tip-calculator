@@ -5,6 +5,8 @@ it("Calculate tip test with values of 10 & 15", () => {
     Number((meal * (tip / 100)).toFixed(2))
   );
   expect(calculateTip(10, 15)).toBe(1.5);
+  expect(calculateTip(22.57, 20)).toBe(4.51);
+  // expect(calculateTip(10, 15)).toBe(1.5);
 });
 
 it("test with mocking app", () => {
