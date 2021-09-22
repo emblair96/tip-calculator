@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let tipPercentage = document.querySelector("#tipPercentage");
   let calculateBtn = document.querySelector("#calculateBtn");
   var { calculateTip } = require("./util");
-  
+
   calculateBtn.addEventListener("click", () => {
     let tip = calculateTip(mealAmt.value, tipPercentage.value);
     let total = Number(mealAmt.value) + tip;
