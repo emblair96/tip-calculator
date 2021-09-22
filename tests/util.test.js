@@ -1,4 +1,4 @@
-const util = require("../util");
+const util = require("../public/util");
 // jest.mock("./myLoggerFactory", jest.fn());
 
 test("calculate tip for $10 w/ 15% tip", () => {
